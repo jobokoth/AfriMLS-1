@@ -9,7 +9,7 @@
             <div class="col-md-8">
                 <div class="">
                             <div class="col-md-12">
-                                <img class="w-100 h-25 img-fluid" src="{{asset('assets/images/properties/house1.jpg')}}" alt="">
+                                <img class="w-100 h-25 img-fluid" src="{{$data[0]['property']->getPropertyImage()}}" alt="">
                             </div>
                         </div>
 
