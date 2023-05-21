@@ -41,7 +41,7 @@
 
                                 <div class="row">
                                     <div class="col-12">
-                                        <h5>Karen, Nairobi</h5>
+                                        <h5>Juja, Nairobi</h5>
                                     </div>
                                 </div>
 
