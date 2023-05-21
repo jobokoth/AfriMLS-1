@@ -1,3 +1,6 @@
+@php
+    $property = $properties->first();
+@endphp
 <div class="sticky-top">
     <div class="card bg-dark py-1">
         <div class="card-body">
@@ -34,8 +37,15 @@
     <div class="bg-white rounded p-2 mt-2">
 
         <figure class="figure">
-            <img src="https://pictures-kenya.jijistatic.com/18849782_MzAwLTIyNS00MzIwY2E3NWRmLTE.webp" class="w-100" alt="House for sale - Karen">
-            <figcaption class="figure-caption text-center">House for sale - Karen</figcaption>
+
+            @if ($properties>=1)
+                <img src="{{asset($property->image)}}" class="w-100" alt="House for sale - Karen">
+                <figcaption class="figure-caption text-center">{{$property->category}} for sale - {{$property->street_name}}</figcaption>
+            @else
+                <h4>No Featured property</h4>
+            @endif
+
+
         </figure>
 
     </div>
