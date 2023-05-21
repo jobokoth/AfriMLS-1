@@ -41,7 +41,7 @@
 
                                 <div class="row">
                                     <div class="col-12">
-                                        <h5>{{ $data[0]['property']->name }}</h5>
+                                        <h5>{{ $data[0]['property']->street_name }}, Kenya</h5>
                                     </div>
                                 </div>
 
