@@ -41,7 +41,7 @@
 
             @if ($total>=1)
                 <img src="{{asset($property->image)}}" class="w-100" alt="House for sale - Karen">
-                <figcaption class="figure-caption text-center">{{$property->category}} for sale -</figcaption>
+                <figcaption class="figure-caption text-center">{{$property->category}} for sale - {{$property->street_name}}</figcaption>
             @else
                 <h4>No Featured property</h4>
             @endif
