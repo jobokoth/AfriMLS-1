@@ -1,5 +1,6 @@
 @php
     $property = $properties->first();
+    $total = $properties->count();
 @endphp
 <div class="sticky-top">
     <div class="card bg-dark py-1">
@@ -38,7 +39,7 @@
 
         <figure class="figure">
 
-            @if ($properties>=1)
+            @if ($total>=1)
                 <img src="{{asset($property->image)}}" class="w-100" alt="House for sale - Karen">
                 <figcaption class="figure-caption text-center">{{$property->category}} for sale - {{$property->street_name}}</figcaption>
             @else
