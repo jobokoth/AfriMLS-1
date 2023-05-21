@@ -25,7 +25,7 @@
                                     </div>
                                     <div class="w-25">
                                         <small class="text-muted mb-1 pb-1">
-                                            <img src="https://img.icons8.com/ios-filled/15/000000/place-marker.png" class=""/> Karen
+                                            <img src="https://img.icons8.com/ios-filled/15/000000/place-marker.png" class=""/> {{$property->street_name}}
                                         </small>
                                     </div>
                                 </div>
