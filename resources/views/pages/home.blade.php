@@ -20,8 +20,12 @@
                                 <h6 class="text-danger my-1"><b>Ksh. {{number_format($property->price)}}</b></h6>
                                 <div class="d-flex justify-content-between">
                                     <div class="w-75 mt-1">
+                                        @if($property->property_type == 'Land')
+                                            <span><img src="https://img.icons8.com/ios-filled/15/000000/land-sales.png" class="mx-0"/></span>
+                                        @else
                                         <span><img src="https://img.icons8.com/ios-filled/15/000000/bed.png" class="mx-0"/>{{$property->number_bedroom}}</span>
                                         <span><img src="https://img.icons8.com/ios-filled/15/000000/bath.png" class="mx-2"/>{{$property->number_bathroom}}</span>
+                                        @endif
                                     </div>
                                     <div class="w-25">
                                         <small class="text-muted mb-1 pb-1">
@@ -29,7 +33,7 @@
                                         </small>
                                     </div>
                                 </div>
-                                <p style="font-size:small; padding-top: 4px">{{$property->description}}</p>
+                                <p style="font-size:small; padding-top: 4px">{{$property->short_description}}</p>
 
                             </div>
 

@@ -72,9 +72,9 @@ class PropertyController extends Controller
        $propertyOption = $property->category;
        $city = $property->city;
        $location = $property->location;
-       $country = $city->country;
+       $country = $property->country;
     //    dd($country);
-       $currency = $country->currency;
+       $currency = $property->currency;
     //    dd($currency->symbol);
 
        array_push($data,

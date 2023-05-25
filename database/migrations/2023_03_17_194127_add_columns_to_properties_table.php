@@ -23,7 +23,7 @@ return new class extends Migration
             $table->string('front_footage')->nullable()->after('lot_size_acre');
             $table->string('availability')->nullable()->after('description');
             $table->string('easements')->nullable()->after('availability');
-            $table->dateTime('expires_on')->nullable()->after('water_frontage');
+            $table->dateTime('expires_on')->nullable();
         });
     }
 
@@ -35,7 +35,16 @@ return new class extends Migration
     public function down()
     {
         Schema::table('properties', function (Blueprint $table) {
-            $table->dropColumn(['water_access',  'water_view', 'water_frontage',  'water_extras']);
+            $table->dropColumn([
+                'price_per_acre',
+                'legal_subdivision_name', 
+                'zoning', 'lot_dimensions',
+                'lot_size_sqft',
+                'lot_size_acre',
+                'front_footage', 
+                'availability', 
+                'easements', 
+                'expires_on']);
         });
     }
 };

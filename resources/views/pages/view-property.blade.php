@@ -46,6 +46,11 @@
                                 </div>
 
                                 <div class="row">
+                                    @if ($data[0]['property']->property_type == 'Land')
+                                    <div class="col-1 float-left">
+                                        <i class="fa-solid fa-seedling fa-lg" style="color: grey"></i>
+                                    </div>
+                                    @else
                                     <div class="col-1 float-left">
                                         <i class="fa-solid fa-bed fa-lg" style="color: grey"></i>
                                         {{ $data[0]['property']->number_bedroom }}
@@ -68,7 +73,7 @@
                                         <i class="fa-solid fa-dog fa-lg" style="color: grey"></i>
                                         1
                                     </div>
-
+                                    @endif
                                 </div>
 
                             </div>
@@ -86,6 +91,10 @@
 
                     <div class="row mx-0 item bg-white shadow-sm m-3 py-1 p-3">
                         <div class="container">
+                            @if ($data[0]['property']->property_type == 'Land')
+                            <div class="col-1"><i class="fa-solid fa-seedling fa-lg" style="color: grey"></i> </div>
+
+                            @else
                             <div class="row">
                                 <div class="col-1"><i class="fa-solid fa-bed fa-lg" style="color: grey"></i> </div>
                                 <div class="col-5">Bedrooms: {{ $data[0]['property']->number_bedroom }}</div>
@@ -106,6 +115,7 @@
                                 <div class="col-1"></div>
                                 <div class="col-5"></div>
                             </div>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -118,11 +128,11 @@
                         </div>
                         <div class="row p-2">
                             <div class="col-2"><i class="fa-solid fa-phone fa-lg" style="color: #3bc89e"></i></div>
-                            <div class="col-10">Show Contact Number</div>
+                            <div class="col-10">{{$data[0]['property']->owner_phone}}</div>
                         </div>
                         <div class="row p-2">
                             <div class="col-2"><i class="fa-solid fa-envelope fa-lg" style="color: #3bc89e"></i></div>
-                            <div class="col-10">Show Email Address</div>
+                            <div class="col-10"></div>
                         </div>
                         <div class="row p-2">
                             <div class="col-12"><input type="text" class="form-control" placeholder="Name"></div>
@@ -153,11 +163,11 @@
                     <div class="row mx-0 item bg-white shadow-sm m-3 py-1 p-3">
                         <div class="container">
                             <div class="row">
-                                <div class="col-12 mx-auto text-center"><img src="https://via.placeholder.com/150"></div>
+                                <div class="col-12 mx-auto text-center"><img src="{{asset('assets/images/logo/AfriMLS-logo-web.jpg')}}"></div>
                             </div>
                             <div class="row">
                                 <div class="col-12 mx-auto text-center">
-                                    <h4>Ivy Properties</h4>View all properties for sale
+                                    <h4>AFRIMLS</h4>View all properties for sale
                                 </div>
                             </div>
                         </div>
@@ -166,23 +176,22 @@
                     <div class="row mx-0 item bg-white shadow-sm m-3 py-1 p-3">
                         <div class="container">
                             <div class="row">
-                                <div class="col-4"><img src="https://via.placeholder.com/100"></div>
                                 <div class="col-8">
                                     <div class="container">
                                         <div class="row">
                                             <div class="col-12">
-                                                <h6>IVY WANJIRU</h6>
+                                                <h6>Douglas</h6>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col-2"><i class="fa-solid fa-phone fa-lg"
                                                     style="color: #3bc89e"></i></div>
-                                            <div class="col-10">Show Contact Number</div>
+                                            <div class="col-10">0705 157 134</div>
                                         </div>
                                         <div class="row">
                                             <div class="col-2"><i class="fa-solid fa-envelope fa-lg"
                                                     style="color: #3bc89e"></i></div>
-                                            <div class="col-10">Show Email Address</div>
+                                            <div class="col-10"></div>
                                         </div>
                                     </div>
 

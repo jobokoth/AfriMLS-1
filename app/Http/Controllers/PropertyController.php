@@ -151,6 +151,7 @@ class PropertyController extends Controller
             $newProperty->name = $request->pname;
             $newProperty->category = $request->category;
             $newProperty->description = $request->description;
+            $newProperty->short_description = $request->short_description;
             $newProperty->location_id = $request->location_id;
             $newProperty->price = $request->property_price;
             

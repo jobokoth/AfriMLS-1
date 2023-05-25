@@ -47,7 +47,7 @@
                                                 <label for="">City</label>
                                                 <select name="city_id" id="city_id" class="form-control" required
                                                     onchange="getLocations()">
-                                                    <option value="" disabled>select city</option>
+                                                    <option value="1">Nairobi</option>
                                                     @foreach ($data[0]['cities'] as $city)
                                                         <option value="{{ $city->id }}">{{ $city->name }}</option>
                                                     @endforeach
@@ -81,6 +81,9 @@
                                             </p>
                                         </div>
                                         <div class="col-md-3" style="padding: 1px; margin: 1px">
+                                            <p>
+                                                <textarea name="short_description" id="" cols="60" rows="2" required placeholder="Short Description"></textarea>
+                                            </p>
                                             <p>
                                                 <textarea name="description" id="" cols="60" rows="2" required placeholder="Description"></textarea>
                                             </p>

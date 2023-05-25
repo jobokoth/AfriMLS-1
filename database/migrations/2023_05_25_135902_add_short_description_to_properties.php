@@ -14,8 +14,8 @@ return new class extends Migration
     public function up()
     {
         Schema::table('properties', function (Blueprint $table) {
-            $table->string('water_name')->nullable();
-            $table->string('water_front_feet')->nullable()->after('water_name');
+            //
+            $table->string('short_description')->nullable()->after('description');
         });
     }
 
@@ -27,7 +27,8 @@ return new class extends Migration
     public function down()
     {
         Schema::table('properties', function (Blueprint $table) {
-            $table->dropColumn(['water_name', 'water_front_feet']);
+            //
+            $table->dropColumn('short_description');
         });
     }
 };
