@@ -122,7 +122,7 @@
                         </div>
                         <div class="row p-2">
                             <div class="col-2"><i class="fa-solid fa-envelope fa-lg" style="color: #3bc89e"></i></div>
-                            <div class="col-10"></div>
+                            <div class="col-10">info.afrimls@gmail.com</div>
                         </div>
                         <div class="row p-2">
                             <div class="col-12"><input type="text" class="form-control" placeholder="Name"></div>
@@ -181,7 +181,7 @@
                                         <div class="row">
                                             <div class="col-2"><i class="fa-solid fa-envelope fa-lg"
                                                     style="color: #3bc89e"></i></div>
-                                            <div class="col-10"></div>
+                                            <div class="col-10">info.afrimls@gmail.com</div>
                                         </div>
                                     </div>
 
