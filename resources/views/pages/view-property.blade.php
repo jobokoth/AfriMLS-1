@@ -9,13 +9,39 @@
             </span>
             <div class="row g-5">
                 <div class="col-md-8">
-                    <div class="">
+                    {{-- <div class="">
                         <div class="col-md-12">
                             <img class="w-100 h-25 img-fluid"
                                 src="{{asset($data[0]['property']->image)}}"
                                 alt="Image of {{ $data[0]['property']->name }}">
                         </div>
-                    </div>
+                    </div> --}}
+                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            @foreach ($imageUrls[$data[0]['property']->id] as $key => $imageUrl)
+                            <div class="carousel-item {{$key == 0 ? 'active' : ''}}">
+                                <img src="{{asset($imageUrl)}}" class="d-block w-100" alt="...">
+                            </div>
+                            @endforeach
+                          {{-- <div class="carousel-item active">
+                            <img src="{{asset($data[0]['property']->image)}}" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="{{asset($data[0]['property']->image)}}" class="d-block w-100" alt="...">
+                          </div>
+                          <div class="carousel-item">
+                            <img src="{{asset($data[0]['property']->image)}}" class="d-block w-100" alt="...">
+                          </div> --}}
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                      </div>
 
                     <div class="row mx-0 item bg-white shadow-sm mb-1 py-1">
                         <div class="col-md-12">

@@ -57,8 +57,14 @@ class IndexController extends Controller
 
 		$properties = $landProp->merge($singleUnitProp)->merge($multiUnitProp);
 		$data['properties'] = $properties;
+        $imageUrls = [];
+        foreach ($properties as $property) {
+            $imageUrls[$property->id] = explode('|', $property->image);
+        }
+    
 
-         return view('pages.home',  ['data' => $data]);
+
+         return view('pages.home',  ['data' => $data, 'imageUrls' => $imageUrls]);
     }
 
     public function search(Request $request) {

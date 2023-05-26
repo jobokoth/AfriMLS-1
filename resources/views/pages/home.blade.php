@@ -11,9 +11,26 @@
                 @foreach($properties as $property)
 
                     <div class="row mx-0 item bg-white shadow-sm mb-1 py-1">
-                        <div class="col-md-5">
+                        {{-- <div class="col-md-5">
                             <img src="{{$property->getPropertyImage()}}" alt="" class="w-100">
-                        </div>
+                        </div> --}}
+                        <div id="carouselExampleAutoplaying" class="carousel slide col-md-5" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                @foreach ($imageUrls[$property->id] as $key => $imageUrl)
+                                    <div class="carousel-item {{$key == 0 ? 'active' : ''}}">
+                                        <img src="{{asset($imageUrl)}}" class="d-block w-100" alt="...">
+                                    </div>
+                                @endforeach
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="visually-hidden">Next</span>
+                            </button>
+                          </div>
                         <div class="col-md-7">
                             <div class="align-self-center">
                                 <h5><a href="{{route('show', $property->id)}}" style="color: black; text-decoration: none">{{$property->name}}</a></h5>

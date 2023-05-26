@@ -95,8 +95,14 @@ class PropertyController extends Controller
 
 
 
-        return view('pages.view-property',  ['data' => $data]);
+            $imageUrls = [];
+            $imageUrls[$property->id] = explode('|', $property->image);
 
+            // foreach ($property as $prop) {
+            //     $imageUrls[$prop->id] = explode('|', $prop->image);
+            // }
+
+        return view('pages.view-property',  ['data' => $data, 'imageUrls'=>$imageUrls]);
     }
     //
 
