@@ -232,9 +232,9 @@
                                     <hr size="1">
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-2"><i class="fa-solid fa-print"></i></div>
-                                <div class="col-10">Print</div>
+                            <div class=" print row">
+                                <div class="col-2"><i class="print fa-solid fa-print"></i></div>
+                                <div class="print col-10">Print</div>
                             </div>
                         </div>
                     </div>
@@ -243,4 +243,12 @@
             </div>
         </div>
     </section>
+
+    <script type="">
+        //print function
+        const printButton = document.querySelector('.print');
+        printButton.addEventListener('click', () => {
+        window.print();
+        });
+    </script>
 @endsection
