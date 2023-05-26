@@ -232,7 +232,7 @@
                                     <hr size="1">
                                 </div>
                             </div>
-                            <div class=" print row">
+                            <div style="cursor:pointer" class=" print row">
                                 <div class="col-2"><i class="print fa-solid fa-print"></i></div>
                                 <div class="print col-10">Print</div>
                             </div>
