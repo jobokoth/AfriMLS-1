@@ -47,9 +47,6 @@
 
                                 <div class="row">
                                     @if ($data[0]['property']->property_type == 'Land')
-                                    <div class="col-1 float-left">
-                                        <i class="fa-solid fa-seedling fa-lg" style="color: grey"></i>
-                                    </div>
                                     @else
                                     <div class="col-1 float-left">
                                         <i class="fa-solid fa-bed fa-lg" style="color: grey"></i>
@@ -63,10 +60,6 @@
 
                                     <div class="col-1 float-left">
                                         <i class="fa-solid fa-car fa-lg" style="color: grey"></i> 1
-                                    </div>
-
-                                    <div class="col-1 float-left">
-                                        <i class="fa-solid fa-seedling fa-lg" style="color: grey"></i> 1
                                     </div>
 
                                     <div class="col-1 float-left">
@@ -92,8 +85,6 @@
                     <div class="row mx-0 item bg-white shadow-sm m-3 py-1 p-3">
                         <div class="container">
                             @if ($data[0]['property']->property_type == 'Land')
-                            <div class="col-1"><i class="fa-solid fa-seedling fa-lg" style="color: grey"></i> </div>
-
                             @else
                             <div class="row">
                                 <div class="col-1"><i class="fa-solid fa-bed fa-lg" style="color: grey"></i> </div>
@@ -105,7 +96,6 @@
                             <div class="row">
                                 <div class="col-1"><i class="fa-solid fa-shower fa-lg" style="color: grey"></i> </div>
                                 <div class="col-5">Bathrooms: {{ $data[0]['property']->number_bathroom }}</div>
-                                <div class="col-1"><i class="fa-solid fa-seedling fa-lg" style="color: grey"></i> </div>
                                 <div class="col-5">Garden</div>
                             </div>
 
@@ -206,12 +196,10 @@
                                 <div class="col-12">Share</div>
                             </div>
                             <div class="row">
-                                <div class="col-2"><i class="fa-brands fa-facebook"></i></div>
-                                <div class="col-2"><i class="fa-brands fa-twitter"></i></div>
-                                <div class="col-2"><i class="fa-brands fa-linkedin-in"></i></div>
-                                <div class="col-2"><i class="fa-brands fa-pinterest"></i></div>
-                                <div class="col-2"><i class="fa-brands fa-whatsapp"></i></div>
-                                <div class="col-2"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="col-3"><i class="fa-brands fa-facebook"></i></div>
+                                <div class="col-3"><i class="fa-brands fa-twitter"></i></div>
+                                <div class="col-3"><i class="fa-brands fa-whatsapp"></i></div>
+                                <div class="col-3"><i class="fa-solid fa-envelope"></i></div>
                             </div>
                             <div class="row">
                                 <div class="col-12">
